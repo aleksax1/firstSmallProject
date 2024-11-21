@@ -1,9 +1,12 @@
 import React from "react";
 import '../../App.scss';
-
-function Nav({article}) {
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';function Nav({article}) {
     return (
       <>
+      
+       <div className="nav">
+        <h1>TESLA NEWS</h1>
+          </div>
       <div className="nav2" style={{
         height:"7vh",
         display:"flex",
@@ -16,9 +19,6 @@ function Nav({article}) {
         <div>ABOUT</div>
         <div>CONSTACT</div>
       </div>
-       <div className="nav">
-        <h1>TESLA NEWS</h1>
-          </div>
       </>
     );
   }
