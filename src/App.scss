@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav {
+  width: 100%;
+  height: 35vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://chipex.co.uk/cdn/shop/files/tesla-banner.jpg?v=1648558473");
+  display: flex;
+  align-items: center;
+
+  h1 {
+    padding-left: 10vw;
+    
+  }
+}
+.nav2{
+  font-size: larger;
+  background-color: rgba(187, 44, 44, 0.753);
+}
+.nav2{
+  div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 11px 0;
+    transition: transform 0.7s ease;
+
+  }
+  div:hover{
+  background-color: rgb(231, 140, 140);
+  transform: scale(1.1);
+  }
+}
+.article {
+  display: inline-block;
+border: 1px solid rgb(112, 112, 112);
+margin: 3%;
+box-shadow: -1px 5px 8px 2px rgba(127, 125, 125, 0.591);
+border-radius: 7px;
+background-color: rgb(54, 54, 54);
+transition: transform 0.9s ease;
+  .news-text {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 8px;
+    h2 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      line-height: 1.1;
+      height: calc(1.1em * 3); 
+    }
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      line-height: 1.5; 
+      height: calc(1.5em * 3); 
+    }
+    a{
+      color:rgb(62, 62, 170)
+    }
+    a:hover{
+      color: rgb(98, 98, 222);
+    }
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 7px;
+  }
+}
+.article:hover{
+  transform: scale(1.1);
+}
+.newsDiv {
+  padding: 5% 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+
+}
+.more{
+  display: flex;
+  justify-content: space-between;
+  color: rgb(195, 61, 61);
+}
+.footer{
+  background-color: rgb(67, 67, 67);  
+  a{
+    color: aliceblue;
+  }
+}
