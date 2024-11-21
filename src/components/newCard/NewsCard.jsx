@@ -1,13 +1,12 @@
 import React from "react";
 import "../../App.scss";
 
-function NewsCard({ article }) {  
+function NewsCard({ article }) {   
 
-  if (
-    article.title === '[REMOVED]'
-  ) {
+  if (!article || !article.title || article.title === '[REMOVED]' || !article.url) {
     return null;
   }
+
   return (  
     <>
       <div className="article">
@@ -22,11 +21,11 @@ function NewsCard({ article }) {
 
         <div className="news-text">
         <h2>{article.title}</h2>
-        <p>{article.description}</p>
+        <p>{article.description|| "NO DESCRIPTION"}</p>
        <div className="more"> <a href={article.url} target="_blank" rel="">
           Procitaj vise...
         </a>
-        <h5>{article.author}</h5>
+        <h5>{article.author||"Unknown author"}</h5>
         </div>
         </div>
       </div>

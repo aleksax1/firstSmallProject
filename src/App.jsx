@@ -17,8 +17,11 @@ function App() {
         axios.get(
           'https://newsapi.org/v2/everything?q=tesla&from=2024-11-1&sortBy=publishedAt&pageSize=15&apiKey=478f6f782df94f85ae8504f796503aad'
         );
-        setArticles(response.data.articles);
-        console.log(response.data.articles);
+        const validArticles = response.data.articles.filter(article => {
+          return article.title && article.title !== '[REMOVED]' && article.description && article.url;
+        });
+        setArticles(validArticles);
+        console.log(validArticles);
       } catch (error) {
         setError('Error fetching data');
       }
@@ -27,7 +30,7 @@ function App() {
     fetchArticles();
   }, []);
 
-  if (error) return alert("ERORR")
+  if (error) return alert("ERORR FETCHING DATA")
 
   return (
     <>
@@ -45,18 +48,20 @@ function App() {
           bottom: 40,
           right: 12,
           height: 60,
-          width: "10vw",
+          width: "11vw",
           backgroundColor: "gray",
           cursor: "pointer",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          borderRadius:"40px"
+          borderRadius:"40px",
+          gap:"1vw",
+          paddingLeft:"1vw"
         }}
         onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
         <h5 
         style={{
-          paddingRight:"5px"
+
         }}>GO TO TOP</h5>
          <IoIosArrowDropupCircle size={35} />
       </div>

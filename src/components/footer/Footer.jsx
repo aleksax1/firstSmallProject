@@ -28,7 +28,7 @@ function Footer() {
           <h4>created by: Aleksa Jankovic</h4> 
           </div>
           <div>
-          <a href="https://github.com/aleksax1" rel="_blank"><PiGithubLogoLight style={{
+          <a href="https://github.com/aleksax1" rel="_blank" ><PiGithubLogoLight style={{
             width:'50px'
             ,height:'50px'
             }}/></a>
