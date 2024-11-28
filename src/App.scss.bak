@@ -88,7 +88,8 @@ transition: transform 0.9s ease;
 .newsDiv {
   padding: 3% 4%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 7px;
+  grid-template-columns: 2fr 1fr 1fr ;
 
 }
 .more{

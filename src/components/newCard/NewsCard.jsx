@@ -23,7 +23,7 @@ function NewsCard({ article }) {
         <h2>{article.title}</h2>
         <p>{article.description|| "NO DESCRIPTION"}</p>
        <div className="more"> <a href={article.url} target="_blank" rel="">
-          Procitaj vise...
+          Read more...
         </a>
         <h5>{article.author||"Unknown author"}</h5>
         </div>
